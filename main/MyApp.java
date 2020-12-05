@@ -1,6 +1,6 @@
 package main;
 import java.util.StringTokenizer;
-
+import base.*;
 /**
  * Write a description of class MyApp here.
  *
@@ -9,20 +9,22 @@ import java.util.StringTokenizer;
  */
 public class MyApp
 {
-   public void makeToken(String data){
-       StringTokenizer obj2 = new StringTokenizer(data, ",");
-       
-       int array[] = new int[5]; 
-       for(int i =0; obj2.hasMoreElements(); i++)
-       {   
+   public static Integer[] makeToken(String obj){
+       Integer array[] = new Integer[6];
+       StringTokenizer st = new StringTokenizer(obj, ",");
+       int i =0; 
+       while(st.hasMoreTokens()){
+           array[i] = Integer.valueOf(st.nextToken());
+           i++;
         }
+          return array;
     }
     
-   public void makeCircle(){
-       
+   public static Circle makeCircle(Integer x, Integer y, Integer r){
+       return (new Circle(x, y, r));
     }
     
-    public static void main(String[] args){
+   public static void main(String[] args){
        Integer[] array;
        String data = "2,3,4,3,4,10";
        array = makeToken(data);
