@@ -1,0 +1,14 @@
+package myInterface;
+
+/**
+ * 실습#1 - Shape 클래스
+ * 
+ * @author (2019315027 최서연, 2019315036 허다희) 
+ * @version (2020.09.16)
+ */
+
+public interface Shape
+{
+    public final double PI = 3.14;
+    public abstract double getArea();
+}
